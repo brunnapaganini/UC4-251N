@@ -3,7 +3,12 @@
 const sociedade = ['Frodo', 'Sam', 'Gandalf', 'Legolas', 'Gimli', 'Merry', 'Pippin', 'Aragorn', 'Boromir'];
 
 for (let i = 0; i < sociedade.length; i++) {
+    if(sociedade[i] === "Frodo" 
+       || sociedade[i] === "Sam"
+       || sociedade[i] === "Merry" 
+       || sociedade[i] === "Pippin") {
     console.log(`Hobbit encontrado: ${sociedade[i]}`)
+    }
 }
 
 //2
@@ -36,8 +41,8 @@ const personagem = {
     Kakashi: 'Hatake'
 };
 
-for (const cla in personagem){
-    console.log(`${cla} pertence ao clã ${personagem[cla as keyof typeof personagem]}`)
+for (const personagemNaruto in personagem){
+    console.log(`${personagemNaruto} pertence ao clã ${personagem[personagemNaruto as keyof typeof personagem]}`)
 }
 
 //4
@@ -50,7 +55,7 @@ const personagen = [
 ];
 
 personagen.forEach((personage, i) =>{
-    if (personage.poder >= 8000) {
+    if (personage.poder > 8000) {
         console.log(`O poder de ${personage.nome} é maior de 8000`)
     }
 })
@@ -62,10 +67,10 @@ let contador = 0
 
 while (contador < pokemons.length) {
     if(pokemons[contador] === "Mewtwo"){
-        console.log(`Pokemon raro capturado ${pokemons[contador]}`)
-    } else {
-        console.log(`Pokemon capturado ${pokemons[contador]}`)
-    }
+        console.log(`Pokemon lendário capturado ${pokemons[contador]}`)
+        break
+    } 
+    console.log(`Pokemon capturado ${pokemons[contador]}`)
     contador++
 }
 
@@ -75,10 +80,8 @@ let passos = 0;
 const passosParaMordor = 5;
 
 do {
-    if (passos === passosParaMordor){
-        console.log(`Passos dados ${passos}. Parabéns, você chegou a Mordor`)
-    } else {
-        console.log(`Passos dados ${passos}`)
-    }
+    console.log(`Passos dados ${passos}`)
     passos++
-} while(passos < 6)
+} while (passos < passosParaMordor){
+        console.log(`Chegamos em Mordor`)
+}
