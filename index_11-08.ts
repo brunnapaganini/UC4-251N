@@ -32,25 +32,25 @@ while (opcao !== 5) {
     opcao = Number(readline.question("Escolha uma opção: "));
 
     if (opcao >= 1 && opcao <= 4) {
-        const numero1 = Number(readline.question("Digite o primeiro número: "));
-        const numero2 = Number(readline.question("Digite o segundo número: "));
+        const a = Number(readline.question("Digite o primeiro número: "));
+        const b = Number(readline.question("Digite o segundo número: "));
         let resultado: number | string;
 
         switch (opcao) {
             case 1:
-                resultado = somar(numero1, numero2);
+                resultado = somar(a, b);
                 console.log("Resultado: " + resultado);
                 break;
             case 2:
-                resultado = subtrair(numero1, numero2);
+                resultado = subtrair(a, b);
                 console.log("Resultado: " + resultado);
                 break;
             case 3:
-                resultado = multiplicar(numero1, numero2);
+                resultado = multiplicar(a, b);
                 console.log("Resultado: " + resultado);
                 break;
             case 4:
-                resultado = dividir(numero1, numero2);
+                resultado = dividir(a, b);
                 console.log("Resultado: " + resultado);
                 break;
         }
@@ -60,3 +60,4 @@ while (opcao !== 5) {
         console.log("Opção inválida. Por favor, tente novamente.");
     }
 }
+
