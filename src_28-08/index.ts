@@ -83,12 +83,9 @@ console.log(`\nÁrea do círculo é ${circulo.calcularArea()}`)
 
 //9
 
-const sistema = new SistemaLogin();
+const sistema = new SistemaLogin("admin","1234");
 
-const usuario = "admin";
-const senha = "1234";
-
-if (sistema.autenticar(usuario, senha)) {
+if (sistema.autenticar("admin","1234")) {
   console.log("\nAutenticação bem-sucedida!");
 } else {
   console.log("\nUsuário ou senha inválidos.");
